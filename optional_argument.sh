@@ -1,4 +1,5 @@
 #!/bin/bash
+# usage function if there is no argument or -h option
 help()
 {
     echo "Usage: tagdelete [ -d | --date ]
@@ -21,11 +22,12 @@ help()
 # done
 # }
 
+# clone ripo from remote and cd into it when --repo option is given
  clone_git_repo{
     git clone $REPO
     cd $(basename -s .git "$REPO")
   }
-
+# non-postional argument with the help of getopt
 LONG=date:,repo:,help
 SHORT=d:,r:,h
 OPTS=$(getopt --options $SHORT --long $LONG  --name "tagdelete" -- "$@")
