@@ -1,4 +1,4 @@
-# gittagdelete
+# gittagdelete(tested on MacOS)
 # steps of deleting tag from  specific date and older:
   
   # expire_tag.sh
